@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="brand">
+    <div class="scope" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="sweep"></span><span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span></div>
+    <div class="brand-text">
+      <h1>TOKEN LAUNCH RADAR</h1>
+      <p id="summary">Sweeping the snapshot…</p>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button type="button" data-view="board">The board</button>
+    <button type="button" data-view="live">Already trading</button>
+    <button type="button" data-view="model">How it scores</button>
+  </nav>
+</header>
+
+<section class="controls" id="controls">
+  <input id="q" type="search" placeholder="Search name or slug…" autocomplete="off">
+  <select id="fcat"><option value="">All categories</option></select>
+  <select id="fchain"><option value="">All chains</option></select>
+  <select id="ftvl">
+    <option value="0">Any TVL</option>
+    <option value="50000000">TVL $50M +</option>
+    <option value="250000000">TVL $250M +</option>
+    <option value="1000000000">TVL $1B +</option>
+  </select>
+  <label class="chk"><input type="checkbox" id="fwatch"> Watchlist only</label>
+  <span id="count" class="count"></span>
+</section>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="foot">
+  <p>An implied value is this radar's own claim about what a future token would be worth if the
+  protocol's record stayed as it is — not a prediction that a token will launch. “Records no token”
+  is what the snapshot says, not proof that none exists. Snapshot: <span id="src"></span>.</p>
+</footer>
+
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
